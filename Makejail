@@ -1,0 +1,23 @@
+INCLUDE options/options.makejail
+
+ARG server_ip=10.0.0.2
+ARG network=rustdesk-net
+
+CMD sed -e "s|quarterly|latest|g" -i.bak /etc/pkg/FreeBSD.conf
+
+PKG rustdesk-server
+
+COPY files/root/post-rustdesk-init.sh /root/
+CMD chown root:wheel /root/post-rustdesk-init.sh
+CMD cat /usr/local/share/examples/rustdesk-server/syslog.sample >> /etc/syslog.conf
+
+SYSRC rustdesk_hbbs_enable=YES
+SYSRC rustdesk_hbbs_ip=${server_ip}
+SYSRC rustdesk_hbbr_enable=YES
+
+SERVICE syslogd restart
+SERVICE rustdesk_hbbs start
+SERVICE rustdesk_hbbr start
+
+CMD sh /root/post-rustdesk-init.sh
+CMD rm /root/post-rustdesk-init.sh

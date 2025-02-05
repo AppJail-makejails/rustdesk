@@ -1,0 +1,13 @@
+OPTION template=files/template.conf
+OPTION resolv_conf
+OPTION tzdata
+OPTION overwrite
+OPTION virtualnet=${network}:rustdesk address:${server_ip} default
+OPTION nat=network:${network}
+OPTION expose=21115:21115 network:${network} proto:tcp
+OPTION expose=21116:21116 network:${network} proto:tcp
+OPTION expose=21116:21116 network:${network} proto:ucp
+OPTION expose=21117:21117 network:${network} proto:tcp
+OPTION expose=21118:21118 network:${network} proto:tcp
+OPTION expose=21119:21119 network:${network} proto:tcp
+OPTION start
