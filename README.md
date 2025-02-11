@@ -20,6 +20,8 @@ appjail makejail \
 
 ### Arguments
 
+* `rustdesk_hbbs` (default: `1`): Enable and start the `rustdesk-hbbs` `rc(8)` script.
+* `rustdesk_hbbr` (default: `1`): Enable and start the `rustdesk-hbbr` `rc(8)` script.
 * `rustdesk_ajspec` (default: `gh+AppJail-makejails/rustdesk`): Entry point where the `appjail-ajspec(5)` file is located.
 * `rustdesk_tag` (default: `13.4`): see [#tags](#tags).
 
