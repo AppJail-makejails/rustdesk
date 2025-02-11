@@ -16,19 +16,17 @@ appjail makejail \
     -o ip4_inherit
 ```
 
-**Note**: See [RustDesk docs](https://rustdesk.com/docs/en/self-host/) for more information on the ports used.
-
 ### Arguments
 
 * `rustdesk_ajspec` (default: `gh+AppJail-makejails/rustdesk`): Entry point where the `appjail-ajspec(5)` file is located.
-* `rustdesk_tag` (default: `13.4`): see [#tags](#tags).
+* `rustdesk_tag` (default: `%%TAG1%%`): see [#tags](#tags).
 
 ## Tags
 
 | Tag           | Arch    | Version            | Type   |
 | ------------- | --------| ------------------ | ------ |
-| `13.4`    | `amd64` | `13.4-RELEASE` | `thin` |
-| `14.2`    | `amd64` | `14.2-RELEASE` | `thin` |
+| `%%TAG1%%`    | `amd64` | `%%TAG1%%-RELEASE` | `thin` |
+| `%%TAG2%%`    | `amd64` | `%%TAG2%%-RELEASE` | `thin` |
 
 ## Acknowledgments
 

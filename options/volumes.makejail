@@ -1,0 +1,1 @@
+OPTION volume=rustdesk-db mountpoint:/var/db/rustdesk owner:319 group:319 perm:770
