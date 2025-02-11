@@ -23,6 +23,12 @@ appjail makejail \
 * `rustdesk_ajspec` (default: `gh+AppJail-makejails/rustdesk`): Entry point where the `appjail-ajspec(5)` file is located.
 * `rustdesk_tag` (default: `13.4`): see [#tags](#tags).
 
+### Volumes
+
+| Name         | Owner | Group | Perm | Type | Mountpoint  |
+| ------------ | ----- | ----- | ---- | ---- | ----------- |
+| rustdesk-db | 319  | 319  |  770   |  -   | /var/db/rustdesk  |
+
 ## Tags
 
 | Tag           | Arch    | Version            | Type   |
