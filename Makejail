@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG rustdesk_tag=13.4
+ARG rustdesk_tag=13.5
 ARG rustdesk_ajspec=gh+AppJail-makejails/rustdesk
 ARG rustdesk_hbbs=1
 ARG rustdesk_hbbr=1
