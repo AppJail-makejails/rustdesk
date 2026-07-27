@@ -1,18 +1,5 @@
-INCLUDE options/options.makejail
+ARG rustdesk_from=ghcr.io/appjail-makejails/rustdesk
+ARG rustdesk_tag=latest
 
-ARG rustdesk_tag=14.3
-ARG rustdesk_ajspec=gh+AppJail-makejails/rustdesk
-ARG rustdesk_hbbs=1
-ARG rustdesk_hbbr=1
-
-FROM --entrypoint "${rustdesk_ajspec}" rustdesk:${rustdesk_tag}
-
-RAW if [ "${rustdesk_hbbs}" != 0 ]; then
-        SERVICE rustdesk-hbbs oneenable
-        SERVICE rustdesk-hbbs start
-RAW fi
-
-RAW if [ "${rustdesk_hbbr}" != 0 ]; then
-        SERVICE rustdesk-hbbr oneenable
-        SERVICE rustdesk-hbbr start
-RAW fi
+OPTION overwrite=force
+OPTION from=${rustdesk_from}:${rustdesk_tag}
