@@ -70,7 +70,7 @@ options:
   - alias:
   - ip4_inherit:
   - ip6_inherit:
-  - container: 'boot args:--pull'
+  - container: 'args:--pull'
 
 services:
   rendezvous:
@@ -103,7 +103,7 @@ options:
   - alias:
   - ip4_inherit:
   - ip6_inherit:
-  - container: 'boot args:--pull'
+  - container: 'args:--pull'
 
 services:
   rendezvous:

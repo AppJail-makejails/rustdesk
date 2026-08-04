@@ -1,5 +1,6 @@
 ARG rustdesk_from=ghcr.io/appjail-makejails/rustdesk
 ARG rustdesk_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${rustdesk_from}:${rustdesk_tag}
