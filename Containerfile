@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.title="RustDesk" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U rustdesk-server; \
+    pkg install rustdesk-server; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
